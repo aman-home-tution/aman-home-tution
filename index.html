@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Home Tuition by Aman Negi - Expert Classes from 6th to 12th"/>
+  <title>Aman Negi | Home Tuition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2b5876, #4e4376);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+
+    header p {
+      margin: 10px 0 20px;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .cards {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Aman Negi - M.Sc. Mathematics</h1>
+  <p>Expert Home Tuition for Classes 6th–12th | Personalized Learning</p>
+  <a href="#contact" class="btn">Contact Now</a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I'm Aman Negi, M.Sc. in Mathematics, dedicated to helping students from 6th to 12th grade excel in their studies through personalized home tutoring.</p>
+</section>
+
+<section id="classes">
+  <h2>Subjects Offered</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Classes 6th–10th</h3>
+      <p>Science, Social Science, Mathematics, Computer Science</p>
+    </div>
+    <div class="card">
+      <h3>Classes 11th–12th</h3>
+      <p>Mathematics & Higher Mathematics</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Call or WhatsApp: <strong>+91 9548407751</strong></p>
+  <form class="contact-form" onsubmit="sendMessage(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required/>
+    <input type="text" id="class" placeholder="Class (e.g., 10th, 12th)" required/>
+    <input type="text" id="subjects" placeholder="Subjects (e.g., Math, Science)" required/>
+    <input type="text" id="phone" placeholder="Your Contact Number" required/>
+    <textarea id="message" placeholder="Preferred Time or Message..." rows="4"></textarea>
+    <button type="submit" class="btn">Send on WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Aman Negi | Home Tuition Services</p>
+</footer>
+
+<script>
+  function sendMessage() {
+    const name = document.getElementById('name').value;
+    const classValue = document.getElementById('class').value;
+    const subjects = document.getElementById('subjects').value;
+    const phone = document.getElementById('phone').value;
+    const msg = document.getElementById('message').value;
+
+    const whatsappURL = `https://wa.me/919548407751?text=Hello%20Aman%20Negi,%0AMy%20Name:%20${encodeURIComponent(name)}%0AClass:%20${encodeURIComponent(classValue)}%0ASubjects:%20${encodeURIComponent(subjects)}%0AContact:%20${encodeURIComponent(phone)}%0AMessage:%20${encodeURIComponent(msg)}`;
+    
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
+</body>
+</html>
